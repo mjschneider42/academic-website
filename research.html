@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research · MJ Schneider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+    html { scroll-behavior: smooth; }
+    body { background: #f7f2e6; color: #4B4B30; font-family: 'Jost', sans-serif; font-weight: 300; margin: 0; }
+    .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .label { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; color: #AFA857; }
+    .rule { display: inline-block; width: 2rem; height: 1px; background: #D2BF81; vertical-align: middle; margin-right: 0.65rem; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 500; color: #4B4B30; text-decoration: none; letter-spacing: 0.01em; display: flex; align-items: center; gap: 0.55rem; }
+    .nav-logo em { font-style: italic; color: #6F4128; }
+    .nav-link { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.11em; text-transform: uppercase; color: #6F6C43; text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s; }
+    .nav-link:hover { color: #4B4B30; border-bottom-color: #AEC7E0; }
+    .nav-link.active { color: #4B4B30; border-bottom-color: #AEC7E0; }
+    .nav-link:focus-visible { outline: 2px solid #AEC7E0; outline-offset: 3px; border-radius: 2px; }
+    .decor { position: absolute; pointer-events: none; z-index: 0; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header style="position:sticky;top:0;z-index:50;background:rgba(247,242,230,0.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(75,75,48,0.1);">
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:56px;">
+    <a href="index.html" class="nav-logo">
+      <svg width="14" height="18" viewBox="0 0 14 18" fill="none" style="color:#4B4B30;flex-shrink:0;">
+        <path d="M7 17 C7 17 7 9 7 5 C7 2.5 9.2 1 11.8 1.4 C11.8 1.4 12.2 5.5 9.5 8.2 C8.2 9.5 7 11 7 17Z" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 17 C7 17 7 9 7 5 C7 2.5 4.8 1 2.2 1.4 C2.2 1.4 1.8 5.5 4.5 8.2 C5.8 9.5 7 11 7 17Z" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      MJ <em>Schneider</em>
+    </a>
+    <nav style="display:flex;align-items:center;gap:2rem;">
+      <a href="research.html" class="nav-link active">Research</a>
+      <a href="publications.html" class="nav-link">Publications</a>
+      <a href="teaching.html" class="nav-link">Teaching</a>
+      <a href="mentorship.html" class="nav-link">Mentorship</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- PAGE HEADER -->
+<section style="padding:4.5rem 0 3.5rem;background:linear-gradient(160deg,#f7f2e6 55%,rgba(174,199,224,0.2) 100%);position:relative;overflow:hidden;">
+
+  <!-- Large botanical branch -->
+  <div class="decor" style="right:-20px;top:0;width:270px;opacity:0.32;">
+    <svg viewBox="0 0 120 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M60 430 C59 340 61 240 60 20" stroke="#AEC7E0" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M60 380 C76 364 104 370 99 392 C94 410 60 402 60 380Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 355 C44 339 16 347 21 369 C26 387 60 379 60 355Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 296 C80 276 112 284 106 310 C100 332 60 320 60 296Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 270 C40 250 8 260 14 286 C20 308 60 296 60 270Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 208 C84 184 120 194 112 224 C104 250 60 236 60 208Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 180 C36 156 0 168 8 198 C16 224 60 210 60 180Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 120 C80 98 108 108 102 134 C96 156 60 144 60 120Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 95 C40 73 12 85 18 111 C24 133 60 121 60 95Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <p class="label" style="margin-bottom:1rem;"><span class="rule"></span>Research</p>
+    <h1 class="font-display" style="font-size:clamp(2.6rem,5vw,3.8rem);font-weight:300;line-height:1.06;letter-spacing:-0.022em;color:#4B4B30;max-width:18ch;">
+      Questions I <em style="font-style:italic;color:#6F4128;">study</em>
+    </h1>
+    <p style="font-size:1.08rem;font-weight:300;line-height:1.82;color:#5a5a38;max-width:52ch;margin-top:1.5rem;">My research broadly asks: how do people understand who they are, and how does that understanding change? I approach this through the lens of social, cognitive, and personality psychology, drawing on experimental methods to study identity, self-concept, and social cognition.</p>
+  </div>
+</section>
+
+<!-- RESEARCH AREAS -->
+<section style="padding:4rem 0 5rem;position:relative;overflow:hidden;">
+
+  <!-- Scattered dots -->
+  <div class="decor" style="left:10px;top:100px;width:121px;opacity:0.33;">
+    <svg viewBox="0 0 90 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="18" r="4" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="60" cy="8" r="2.5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="78" cy="40" r="5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="12" cy="72" r="3" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="50" cy="65" r="2" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="30" cy="110" r="4.5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="72" cy="100" r="2.5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="55" cy="148" r="3.5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="10" cy="160" r="2" stroke="#AFA857" stroke-width="1.2"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;display:flex;flex-direction:column;gap:4rem;">
+
+    <!-- Area 1 -->
+    <div id="self" style="display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start;" class="research-area">
+      <div>
+        <div style="width:2.5rem;height:3px;background:#AEC7E0;margin-bottom:1.2rem;border-radius:2px;"></div>
+        <h2 class="font-display" style="font-size:clamp(1.7rem,3vw,2.2rem);font-weight:300;letter-spacing:-0.015em;color:#4B4B30;line-height:1.15;">Self &amp; Identity</h2>
+      </div>
+      <div>
+        <p class="label" style="margin-bottom:1rem;color:#AEC7E0;">Core focus</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.82;color:#3d3d22;margin-bottom:1.2rem;">How do people revise their self-concepts? A central question in my work concerns the mechanisms by which people come to understand themselves differently. My current research examines how identity shifts across significant social transitions — including how self-continuity is perceived and maintained during gender transitions, and the possible benefits of self change for social interaction.</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.82;color:#3d3d22;margin-bottom:1.2rem;">My foundational work demonstrated that mental simulation — imagining oneself in new scenarios — can produce genuine changes in self-concept, but only when prior self-knowledge is activated first. This finding has implications for understanding identity malleability more broadly, highlighting the circumstances that produce self-change.</p>
+        <p style="font-size:1.08rem;font-weight:300;line-height:1.7;color:#6F6C43;border-left:2px solid #AEC7E0;padding-left:1rem;font-style:italic;">Relevant publications: <a href="https://doi.org/10.1037/xge0001663" target="_blank" rel="noopener" style="color:#AEC7E0;text-decoration:none;border-bottom:1px solid rgba(174,199,224,0.45);">Schneider et al. (2024), <em>JEP: General</em></a></p>
+      </div>
+    </div>
+
+    <div style="height:1px;background:rgba(75,75,48,0.1);"></div>
+
+    <!-- Area 2 -->
+    <div id="prejudice" style="display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start;">
+      <div>
+        <div style="width:2.5rem;height:3px;background:#AFA857;margin-bottom:1.2rem;border-radius:2px;"></div>
+        <h2 class="font-display" style="font-size:clamp(1.7rem,3vw,2.2rem);font-weight:300;letter-spacing:-0.015em;color:#4B4B30;line-height:1.15;">Prejudice &amp; Social Context</h2>
+      </div>
+      <div>
+        <p class="label" style="margin-bottom:1rem;color:#AEC7E0;">Core focus</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.82;color:#3d3d22;margin-bottom:1.2rem;">How do social identities interact with systems of bias? Advised by Dr. Cheryl Kaiser at UW, my current work examines how generational status shapes self-concept in the transition to college, particularly for first-generation students navigating institutions built around different assumptions.</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.82;color:#3d3d22;margin-bottom:1.2rem;">I'm also interested in sexual and gender identity prejudice, and how multiple group memberships interact.</p>
+        <p style="font-size:1.08rem;font-weight:300;line-height:1.7;color:#6F6C43;border-left:2px solid #AFA857;padding-left:1rem;font-style:italic;">Relevant publications: <a href="https://www.routledge.com/Handbook-of-Prejudice-Stereotyping-and-Discrimination/Nelson/p/book/9781032500577" target="_blank" rel="noopener" style="color:#AEC7E0;text-decoration:none;border-bottom:1px solid rgba(174,199,224,0.45);">Kite, Wagner, &amp; Schneider (2024), <em>Handbook of Prejudice, Stereotyping, and Discrimination</em></a></p>
+      </div>
+    </div>
+
+    <div style="height:1px;background:rgba(75,75,48,0.1);"></div>
+
+    <!-- Area 3 -->
+    <div id="polarization" style="display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start;">
+      <div>
+        <div style="width:2.5rem;height:3px;background:#D2BF81;margin-bottom:1.2rem;border-radius:2px;"></div>
+        <h2 class="font-display" style="font-size:clamp(1.7rem,3vw,2.2rem);font-weight:300;letter-spacing:-0.015em;color:#4B4B30;line-height:1.15;">Political Polarization</h2>
+      </div>
+      <div>
+        <p class="label" style="margin-bottom:1rem;color:#AEC7E0;">Core focus</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.82;color:#3d3d22;margin-bottom:1.2rem;">Can religious engagement reduce political animosity? As part of a <a href="https://www.templeton.org/grant/does-living-a-religiously-inspired-life-reduce-affective-polarization-through-instilling-virtues-of-compassion-and-intellectual-humility" target="_blank" rel="noopener" style="color:#4B4B30;text-decoration:none;border-bottom:1px solid rgba(174,199,224,0.6);transition:color 0.18s;" onmouseover="this.style.color='#6F4128'" onmouseout="this.style.color='#4B4B30'">John Templeton Foundation-funded project</a>, our team investigates whether engaging in religious behavior — attending services, practicing rituals, belonging to a faith community — reduces affective polarization between political partisans.</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.82;color:#3d3d22;margin-bottom:1.2rem;">Using daily diary methods, longitudinal designs, and naturalistic events, this work captures how religious engagement varies in everyday life and whether those fluctuations predict affective polarization.</p>
+        <p style="font-size:1.08rem;font-weight:300;line-height:1.7;color:#6F6C43;border-left:2px solid #D2BF81;padding-left:1rem;font-style:italic;">Relevant publications: <a href="https://osf.io/4k5dc/overview?view_only=6cb4698ea1ca4ed8b7f72964fa44e9ea" target="_blank" rel="noopener" style="color:#AEC7E0;text-decoration:none;border-bottom:1px solid rgba(174,199,224,0.45);">Smiley, Schneider, &amp; Kaiser (accepted, <em>Psychology of Religion and Spirituality</em>)</a></p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RECENT WORK -->
+<section style="padding:4rem 0 5rem;background:rgba(174,199,224,0.1);position:relative;overflow:hidden;">
+  <div class="decor" style="right:-40px;bottom:-40px;width:297px;opacity:0.3;">
+    <svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="110" cy="110" r="95" stroke="#AEC7E0" stroke-width="1.4"/>
+      <circle cx="110" cy="110" r="70" stroke="#AEC7E0" stroke-width="0.9" stroke-dasharray="4 6"/>
+    </svg>
+  </div>
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <p class="label" style="margin-bottom:0.75rem;"><span class="rule"></span>Recent Presentations</p>
+    <h2 class="font-display" style="font-size:clamp(1.8rem,3.5vw,2.5rem);font-weight:300;letter-spacing:-0.018em;color:#4B4B30;margin-bottom:2.5rem;">Selected <em style="font-style:italic;color:#6F4128;">Talks &amp; Posters</em></h2>
+
+    <div style="display:flex;flex-direction:column;">
+      <div style="border-top:1px solid rgba(75,75,48,0.13);padding:1.4rem 0;">
+        <p class="label" style="margin-bottom:0.45rem;color:#AEC7E0;">2026 · Symposium Talk</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.4rem;">Tracing self-continuity across gender transitions</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;"><strong style="font-weight:500;">Schneider, M.J.</strong>, Tamir, D., Hershfield, H. · Society for Personality and Social Psychology, Chicago, IL</p>
+      </div>
+      <div style="border-top:1px solid rgba(75,75,48,0.13);padding:1.4rem 0;">
+        <p class="label" style="margin-bottom:0.45rem;color:#AEC7E0;">2025 · Poster</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.4rem;">Self-concept and generational status in the transition to college</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;"><strong style="font-weight:500;">Schneider, M.J.</strong>, Kaiser, C. · Society for Personality and Social Psychology, Denver, CO</p>
+      </div>
+      <div style="border-top:1px solid rgba(75,75,48,0.13);padding:1.4rem 0;">
+        <p class="label" style="margin-bottom:0.45rem;color:#AEC7E0;">2024 · Poster</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.4rem;">Transformative experiences during COVID-19</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;"><strong style="font-weight:500;">Schneider, M. J.</strong>, Wilkins, L., Crockett, &amp; Tamir, D. · Society for Personality and Social Psychology, San Diego, CA</p>
+      </div>
+      <div style="border-top:1px solid rgba(75,75,48,0.13);border-bottom:1px solid rgba(75,75,48,0.13);padding:1.4rem 0;">
+        <p style="font-size:1rem;font-weight:300;color:#6F6C43;font-style:italic;">+ 8 additional conference presentations (2020–2023). <a href="brand_assets/CV_publiccopy.pdf" target="_blank" style="color:#AEC7E0;text-decoration:none;border-bottom:1px solid rgba(174,199,224,0.4);">Full CV →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#4B4B30;padding:1.5rem 0;border-top:1px solid rgba(240,234,216,0.1);">
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
+    <p style="font-size:1.02rem;font-weight:300;color:#6F6C43;letter-spacing:0.04em;">© 2025 MJ Schneider</p>
+    <p style="font-size:1.02rem;font-weight:300;color:#6F6C43;letter-spacing:0.04em;">Department of Psychology · University of Washington · Seattle, WA</p>
+  </div>
+</footer>
+
+<style>
+  @media (max-width: 680px) {
+    .research-area { grid-template-columns: 1fr !important; gap: 1.2rem !important; }
+  }
+</style>
+
+</body>
+</html>

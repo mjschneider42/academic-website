@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teaching · MJ Schneider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+    html { scroll-behavior: smooth; }
+    body { background: #f7f2e6; color: #4B4B30; font-family: 'Jost', sans-serif; font-weight: 300; margin: 0; }
+    .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .label { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; color: #AFA857; }
+    .rule { display: inline-block; width: 2rem; height: 1px; background: #D2BF81; vertical-align: middle; margin-right: 0.65rem; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 500; color: #4B4B30; text-decoration: none; letter-spacing: 0.01em; display: flex; align-items: center; gap: 0.55rem; }
+    .nav-logo em { font-style: italic; color: #6F4128; }
+    .nav-link { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.11em; text-transform: uppercase; color: #6F6C43; text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s; }
+    .nav-link:hover { color: #4B4B30; border-bottom-color: #AEC7E0; }
+    .nav-link.active { color: #4B4B30; border-bottom-color: #AEC7E0; }
+    .nav-link:focus-visible { outline: 2px solid #AEC7E0; outline-offset: 3px; border-radius: 2px; }
+    .decor { position: absolute; pointer-events: none; z-index: 0; }
+    .role-block { border-top: 1px solid rgba(75,75,48,0.13); padding: 2rem 0; }
+    .role-block:last-child { border-bottom: 1px solid rgba(75,75,48,0.13); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header style="position:sticky;top:0;z-index:50;background:rgba(247,242,230,0.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(75,75,48,0.1);">
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:56px;">
+    <a href="index.html" class="nav-logo">
+      <svg width="14" height="18" viewBox="0 0 14 18" fill="none" style="color:#4B4B30;flex-shrink:0;">
+        <path d="M7 17 C7 17 7 9 7 5 C7 2.5 9.2 1 11.8 1.4 C11.8 1.4 12.2 5.5 9.5 8.2 C8.2 9.5 7 11 7 17Z" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 17 C7 17 7 9 7 5 C7 2.5 4.8 1 2.2 1.4 C2.2 1.4 1.8 5.5 4.5 8.2 C5.8 9.5 7 11 7 17Z" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      MJ <em>Schneider</em>
+    </a>
+    <nav style="display:flex;align-items:center;gap:2rem;">
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="publications.html" class="nav-link">Publications</a>
+      <a href="teaching.html" class="nav-link active">Teaching</a>
+      <a href="mentorship.html" class="nav-link">Mentorship</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- PAGE HEADER -->
+<section style="padding:4.5rem 0 3.5rem;background:linear-gradient(160deg,#f7f2e6 55%,rgba(174,199,224,0.18) 100%);position:relative;overflow:hidden;">
+
+  <!-- Botanical branch right -->
+  <div class="decor" style="right:-10px;top:0;width:216px;opacity:0.32;">
+    <svg viewBox="0 0 100 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 335 C49 260 51 160 50 15" stroke="#AEC7E0" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M50 295 C63 280 82 287 79 306 C76 321 50 313 50 295Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M50 273 C37 258 18 267 21 286 C24 301 50 293 50 273Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M50 222 C66 204 88 213 84 236 C80 255 50 244 50 222Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M50 198 C34 180 12 191 16 214 C20 233 50 222 50 198Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M50 148 C68 128 92 138 87 163 C82 184 50 172 50 148Z" stroke="#AFA857" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M50 122 C32 102 8 114 13 139 C18 160 50 148 50 122Z" stroke="#AFA857" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Dots left -->
+  <div class="decor" style="left:10px;bottom:-10px;width:108px;opacity:0.33;">
+    <svg viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="15" cy="14" r="3.5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="48" cy="6" r="2" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="68" cy="28" r="4" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="28" cy="52" r="2.5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="62" cy="60" r="1.5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="8" cy="80" r="5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="45" cy="88" r="3" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="72" cy="100" r="2" stroke="#AFA857" stroke-width="1.2"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <p class="label" style="margin-bottom:1rem;"><span class="rule"></span>Teaching &amp; Mentorship</p>
+    <h1 class="font-display" style="font-size:clamp(2.6rem,5vw,3.8rem);font-weight:300;line-height:1.06;letter-spacing:-0.022em;color:#4B4B30;">
+      In the <em style="font-style:italic;color:#6F4128;">Classroom</em>
+    </h1>
+    <p style="font-size:1.05rem;font-weight:300;line-height:1.82;color:#5a5a38;max-width:52ch;margin-top:1.5rem;">Teaching is a core part of my scholarly practice. I care about engaging in courses where students feel their experience is important and the educational experience is catered to them — I try to make material exciting and relevant.</p>
+  </div>
+</section>
+
+<!-- TEACHING ROLES -->
+<section style="padding:4.5rem 0;position:relative;overflow:hidden;">
+
+  <div class="decor" style="right:-50px;bottom:100px;width:243px;opacity:0.28;">
+    <svg viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="90" cy="90" r="75" stroke="#AEC7E0" stroke-width="1.3"/>
+      <circle cx="90" cy="90" r="50" stroke="#AEC7E0" stroke-width="0.9" stroke-dasharray="3 6"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <p class="label" style="margin-bottom:2rem;"><span class="rule"></span>Teaching Roles</p>
+
+    <div>
+      <div class="role-block">
+        <div style="display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;align-items:start;">
+          <div>
+            <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">2023–Present</p>
+            <p class="font-display" style="font-size:1.25rem;font-weight:400;color:#4B4B30;line-height:1.2;margin-bottom:0.3rem;">Graduate Teaching Assistant</p>
+            <p style="font-size:1.02rem;font-weight:300;color:#6F6C43;font-style:italic;">University of Washington, Seattle</p>
+          </div>
+          <div>
+            <p style="font-size:1rem;font-weight:300;line-height:1.78;color:#3d3d22;margin-bottom:1rem;">I have served as TA for courses spanning the psychology curriculum, supporting lecture sections and leading discussion. My sections aim to strengthen understanding of course material and create a space where students feel comfortable exploring their own knowledge.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(174,199,224,0.2);border:1px solid rgba(174,199,224,0.4);padding:0.3rem 0.75rem;border-radius:2px;">Fundamentals of Research Design</span>
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(174,199,224,0.2);border:1px solid rgba(174,199,224,0.4);padding:0.3rem 0.75rem;border-radius:2px;">Abnormal Psychology</span>
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(174,199,224,0.2);border:1px solid rgba(174,199,224,0.4);padding:0.3rem 0.75rem;border-radius:2px;">Advanced Human Sexuality</span>
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(174,199,224,0.2);border:1px solid rgba(174,199,224,0.4);padding:0.3rem 0.75rem;border-radius:2px;">Psychology of Gender</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="role-block">
+        <div style="display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;align-items:start;">
+          <div>
+            <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">2023–Present</p>
+            <p class="font-display" style="font-size:1.25rem;font-weight:400;color:#4B4B30;line-height:1.2;margin-bottom:0.3rem;">Reader / Grader</p>
+            <p style="font-size:1.02rem;font-weight:300;color:#6F6C43;font-style:italic;">University of Washington, Seattle</p>
+          </div>
+          <div>
+            <p style="font-size:1rem;font-weight:300;line-height:1.78;color:#3d3d22;margin-bottom:1rem;">Supporting course instructors through grading, written feedback, and student assessment across a range of psychology courses.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(210,191,129,0.2);border:1px solid rgba(210,191,129,0.45);padding:0.3rem 0.75rem;border-radius:2px;">Psychology of Health Disparities</span>
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(210,191,129,0.2);border:1px solid rgba(210,191,129,0.45);padding:0.3rem 0.75rem;border-radius:2px;">Biopsychology</span>
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(210,191,129,0.2);border:1px solid rgba(210,191,129,0.45);padding:0.3rem 0.75rem;border-radius:2px;">Social Psychology Lab</span>
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(210,191,129,0.2);border:1px solid rgba(210,191,129,0.45);padding:0.3rem 0.75rem;border-radius:2px;">Learning</span>
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(210,191,129,0.2);border:1px solid rgba(210,191,129,0.45);padding:0.3rem 0.75rem;border-radius:2px;">Motivation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="role-block">
+        <div style="display:grid;grid-template-columns:1fr 2fr;gap:2.5rem;align-items:start;">
+          <div>
+            <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">2018–2021</p>
+            <p class="font-display" style="font-size:1.25rem;font-weight:400;color:#4B4B30;line-height:1.2;margin-bottom:0.3rem;">Undergraduate Teaching Assistant</p>
+            <p style="font-size:1.02rem;font-weight:300;color:#6F6C43;font-style:italic;">University of San Francisco</p>
+          </div>
+          <div>
+            <p style="font-size:1rem;font-weight:300;line-height:1.78;color:#3d3d22;margin-bottom:1rem;">Four years supporting courses across the psychology major, including research methods sequences, prejudice and social cognition, and the undergraduate thesis seminar.</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(175,168,87,0.15);border:1px solid rgba(175,168,87,0.35);padding:0.3rem 0.75rem;border-radius:2px;">Psychology of Prejudice</span>
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(175,168,87,0.15);border:1px solid rgba(175,168,87,0.35);padding:0.3rem 0.75rem;border-radius:2px;">Thesis Development Seminar</span>
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(175,168,87,0.15);border:1px solid rgba(175,168,87,0.35);padding:0.3rem 0.75rem;border-radius:2px;">Biological Psychology</span>
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(175,168,87,0.15);border:1px solid rgba(175,168,87,0.35);padding:0.3rem 0.75rem;border-radius:2px;">Psychological Statistics</span>
+              <span style="font-size:1.02rem;font-weight:400;letter-spacing:0.06em;color:#4B4B30;background:rgba(175,168,87,0.15);border:1px solid rgba(175,168,87,0.35);padding:0.3rem 0.75rem;border-radius:2px;">Research Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section style="padding:4.5rem 0 5rem;background:rgba(174,199,224,0.08);position:relative;overflow:hidden;">
+
+  <div class="decor" style="right:30px;bottom:30px;width:216px;opacity:0.34;">
+    <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="80" cy="80" r="65" stroke="#AEC7E0" stroke-width="1.3"/>
+      <circle cx="80" cy="80" r="44" stroke="#AEC7E0" stroke-width="0.9" stroke-dasharray="3 6"/>
+      <circle cx="80" cy="80" r="22" stroke="#AEC7E0" stroke-width="0.7" stroke-dasharray="2 5" opacity="0.6"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <p class="label" style="margin-bottom:0.75rem;"><span class="rule"></span>Teaching Resources</p>
+    <h2 class="font-display" style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:300;letter-spacing:-0.018em;color:#4B4B30;margin-bottom:1rem;line-height:1.1;">
+      Resources &amp; <em style="font-style:italic;color:#6F4128;">Materials</em>
+    </h2>
+    <p style="font-size:1rem;font-weight:300;line-height:1.78;color:#5a5a38;max-width:52ch;margin-bottom:2.5rem;">Teaching materials available upon request. Sample syllabi and resources will be posted here as they are prepared for sharing.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;">
+      <div style="background:#F0EAD8;border-top:3px solid #AEC7E0;border-radius:2px;padding:1.5rem 1.4rem;box-shadow:0 1px 4px rgba(75,75,48,0.06);">
+        <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">Coming Soon</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;color:#4B4B30;margin-bottom:0.4rem;">Sample Syllabus</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.68;color:#5a5a38;">An example syllabus demonstrating my approach to course design, learning objectives, and inclusive pedagogy practices.</p>
+      </div>
+      <a href="https://teaching.washington.edu/learn/2024-teaching-learning-showcase/song-et-al/" target="_blank" rel="noopener" style="display:block;text-decoration:none;background:#F0EAD8;border-top:3px solid #AFA857;border-radius:2px;padding:1.5rem 1.4rem;box-shadow:0 1px 4px rgba(75,75,48,0.06);transition:transform 0.2s,box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(75,75,48,0.1)';" onmouseout="this.style.transform='';this.style.boxShadow='0 1px 4px rgba(75,75,48,0.06)';">
+        <p class="label" style="margin-bottom:0.5rem;color:#AFA857;">2024 · UW Teaching &amp; Learning Showcase</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;color:#4B4B30;margin-bottom:0.4rem;">Strengthening Course Inclusivity Through Syllabus Review</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.68;color:#5a5a38;">Song, R., Volpe, L., Gray, C., &amp; Schneider, M.J. — A collaborative project on implementing a department-wide syllabus review process for inclusive pedagogy.</p>
+        <p style="font-size:0.88rem;font-weight:400;color:#AEC7E0;margin-top:0.75rem;letter-spacing:0.04em;">View project →</p>
+      </a>
+      <div style="background:#F0EAD8;border-top:3px solid #D2BF81;border-radius:2px;padding:1.5rem 1.4rem;box-shadow:0 1px 4px rgba(75,75,48,0.06);">
+        <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">Coming Soon</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;color:#4B4B30;margin-bottom:0.4rem;">Reading List</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.68;color:#5a5a38;">Curated readings on identity, social cognition, and prejudice suitable for undergraduate courses at varying levels.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#4B4B30;padding:1.5rem 0;border-top:1px solid rgba(240,234,216,0.1);">
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
+    <p style="font-size:1.02rem;font-weight:300;color:#6F6C43;letter-spacing:0.04em;">© 2025 MJ Schneider</p>
+    <p style="font-size:1.02rem;font-weight:300;color:#6F6C43;letter-spacing:0.04em;">Department of Psychology · University of Washington · Seattle, WA</p>
+  </div>
+</footer>
+
+<style>
+  @media (max-width: 680px) {
+    .role-block > div { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  }
+</style>
+
+</body>
+</html>

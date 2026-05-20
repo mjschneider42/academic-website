@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentorship · MJ Schneider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+    body { background: #f7f2e6; color: #4B4B30; font-family: 'Jost', sans-serif; font-weight: 300; margin: 0; }
+    .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .label { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; color: #AFA857; }
+    .label-glacier { color: #AEC7E0; }
+    .rule { display: inline-block; width: 2rem; height: 1px; background: #D2BF81; vertical-align: middle; margin-right: 0.65rem; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 500; color: #4B4B30; text-decoration: none; letter-spacing: 0.01em; display: flex; align-items: center; gap: 0.55rem; }
+    .nav-logo em { font-style: italic; color: #6F4128; }
+    .nav-link { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.11em; text-transform: uppercase; color: #6F6C43; text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s; }
+    .nav-link:hover { color: #4B4B30; border-bottom-color: #AEC7E0; }
+    .nav-link.active { color: #4B4B30; border-bottom-color: #AEC7E0; }
+    .nav-link:focus-visible { outline: 2px solid #AEC7E0; outline-offset: 3px; border-radius: 2px; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 0.45rem; font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; background: #4B4B30; color: #f7f2e6; padding: 0.7rem 1.5rem; border-radius: 2px; text-decoration: none; box-shadow: 0 2px 10px rgba(75,75,48,0.2); transition: background 0.2s, transform 0.15s; }
+    .btn-primary:hover { background: #6F4128; transform: translateY(-1px); }
+    .btn-primary:focus-visible { outline: 2px solid #AEC7E0; outline-offset: 3px; }
+    .student-card { background: #F0EAD8; border-radius: 2px; padding: 1.5rem 1.4rem; box-shadow: 0 1px 4px rgba(75,75,48,0.06), 0 4px 16px rgba(75,75,48,0.04); border-left: 3px solid #AEC7E0; transition: transform 0.2s, box-shadow 0.2s; }
+    .student-card:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(75,75,48,0.1), 0 10px 24px rgba(75,75,48,0.07); }
+    .principle-block { border-top: 1px solid rgba(75,75,48,0.13); padding: 1.6rem 0; }
+    .principle-block:last-child { border-bottom: 1px solid rgba(75,75,48,0.13); }
+    .decor { position: absolute; pointer-events: none; z-index: 0; }
+    section { position: relative; overflow: hidden; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header style="position:sticky;top:0;z-index:50;background:rgba(247,242,230,0.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(75,75,48,0.1);">
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:56px;">
+    <a href="index.html" class="nav-logo">
+      <svg width="14" height="18" viewBox="0 0 14 18" fill="none"><path d="M7 17 C7 17 7 9 7 5 C7 2.5 9.2 1 11.8 1.4 C11.8 1.4 12.2 5.5 9.5 8.2 C8.2 9.5 7 11 7 17Z" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 17 C7 17 7 9 7 5 C7 2.5 4.8 1 2.2 1.4 C2.2 1.4 1.8 5.5 4.5 8.2 C5.8 9.5 7 11 7 17Z" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      MJ <em>Schneider</em>
+    </a>
+    <nav style="display:flex;align-items:center;gap:2rem;">
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="publications.html" class="nav-link">Publications</a>
+      <a href="teaching.html" class="nav-link">Teaching</a>
+      <a href="mentorship.html" class="nav-link active">Mentorship</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section style="padding:4rem 0 3rem;background:linear-gradient(160deg,#f7f2e6 55%,rgba(174,199,224,0.18) 100%);">
+  <!-- Botanical branch top right -->
+  <div class="decor" style="right:-20px;top:-10px;width:256px;opacity:0.34;">
+    <svg viewBox="0 0 120 380" fill="none">
+      <path d="M60 370 C59 290 61 190 60 15" stroke="#AEC7E0" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M60 330 C76 314 102 320 97 342 C92 358 60 350 60 330Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 305 C44 289 18 297 23 319 C28 335 60 327 60 305Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 248 C80 228 110 236 104 260 C98 280 60 268 60 248Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 222 C40 202 10 212 16 236 C22 256 60 244 60 222Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 163 C84 139 116 149 108 176 C100 198 60 184 60 163Z" stroke="#D2BF81" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 136 C36 112 4 124 12 151 C20 173 60 159 60 136Z" stroke="#D2BF81" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <!-- Small dots bottom left -->
+  <div class="decor" style="left:20px;bottom:10px;width:121px;opacity:0.34;">
+    <svg viewBox="0 0 90 90" fill="none">
+      <circle cx="15" cy="18" r="3.5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="45" cy="10" r="2" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="72" cy="28" r="4.5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="30" cy="52" r="2.5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="65" cy="58" r="1.8" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="10" cy="72" r="5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="50" cy="76" r="3" stroke="#AFA857" stroke-width="1.2"/>
+    </svg>
+  </div>
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <p class="label" style="margin-bottom:0.9rem;"><span class="rule"></span>Mentorship</p>
+    <h1 class="font-display" style="font-size:clamp(2.6rem,5vw,3.8rem);font-weight:300;letter-spacing:-0.025em;color:#4B4B30;line-height:1.05;margin-bottom:1rem;">
+      Growing <em style="font-style:italic;color:#6F4128;">together</em>
+    </h1>
+    <p style="font-size:1.05rem;font-weight:300;line-height:1.8;color:#3d3d22;max-width:52ch;">
+      Mentorship is one of the most important parts of what I do. I believe in mentorship as a relationship built on honesty, care, and genuine investment in each student's goals — wherever those goals lead.
+    </p>
+  </div>
+</section>
+
+<!-- MENTORSHIP PHILOSOPHY -->
+<section style="padding:4rem 0;border-top:1px solid rgba(75,75,48,0.1);">
+  <!-- Arc decoration -->
+  <div class="decor" style="left:-70px;bottom:-70px;width:324px;opacity:0.29;">
+    <svg viewBox="0 0 240 240" fill="none">
+      <circle cx="120" cy="120" r="100" stroke="#AEC7E0" stroke-width="1.4"/>
+      <circle cx="120" cy="120" r="75" stroke="#AEC7E0" stroke-width="0.9"/>
+    </svg>
+  </div>
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start;">
+      <div>
+        <p class="label label-glacier" style="margin-bottom:0.75rem;">My Approach</p>
+        <h2 class="font-display" style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:300;letter-spacing:-0.018em;color:#4B4B30;line-height:1.1;">
+          Mentorship <em style="font-style:italic;color:#6F4128;">philosophy</em>
+        </h2>
+      </div>
+      <div>
+        <div class="principle-block">
+          <p class="label" style="margin-bottom:0.5rem;font-size:0.96rem;">01 · Meet Students Where They Are</p>
+          <p style="font-size:1.02rem;font-weight:300;line-height:1.8;color:#3d3d22;">Every student arrives with a different background, different goals, and a different relationship to academia. I try to understand each person's starting point — their knowledge, their anxieties, their ambitions — and build from there so that everyone gets the opportunities they are looking for.</p>
+        </div>
+        <div class="principle-block">
+          <p class="label" style="margin-bottom:0.5rem;font-size:0.96rem;">02 · Teach the Process, Not Just the Product</p>
+          <p style="font-size:1.02rem;font-weight:300;line-height:1.8;color:#3d3d22;">Research is full of false starts and unexpected detours. I try to demystify that process — talking openly about uncertainty, sharing work in progress, and modeling how to think through hard problems rather than just presenting finished answers.</p>
+        </div>
+        <div class="principle-block">
+          <p class="label" style="margin-bottom:0.5rem;font-size:0.96rem;">03 · Support Goals Beyond Research</p>
+          <p style="font-size:1.02rem;font-weight:300;line-height:1.8;color:#3d3d22;">Not every student wants an academic career, and that's entirely okay. I actively support students exploring careers in industry, policy, clinical practice, education, and other paths. The skills you build doing research are genuinely transferable — I want to help you see that.</p>
+        </div>
+        <div class="principle-block">
+          <p class="label" style="margin-bottom:0.5rem;font-size:0.96rem;">04 · Create a Psychologically Safe Space</p>
+          <p style="font-size:1.02rem;font-weight:300;line-height:1.8;color:#3d3d22;">Good science requires being able to say "I don't know" or "I was wrong." I try to build mentor relationships where students feel safe asking questions, admitting confusion, and changing their minds — because those are signs of growth, not weakness.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRENT STUDENTS -->
+<section style="padding:4rem 0 5rem;background:rgba(174,199,224,0.08);border-top:1px solid rgba(75,75,48,0.1);">
+  <!-- Wave lines right -->
+  <div class="decor" style="right:-10px;bottom:30px;width:351px;opacity:0.31;">
+    <svg viewBox="0 0 260 80" fill="none">
+      <path d="M0 16 C32 5 65 26 97 16 C130 6 162 26 195 16 C228 6 247 14 260 12" stroke="#AEC7E0" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+      <path d="M0 38 C32 27 65 48 97 38 C130 28 162 48 195 38 C228 28 247 36 260 34" stroke="#AEC7E0" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+      <path d="M0 58 C32 47 65 68 97 58 C130 48 162 68 195 58 C228 48 247 56 260 54" stroke="#AEC7E0" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+    </svg>
+  </div>
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <p class="label" style="margin-bottom:0.75rem;"><span class="rule"></span>Current &amp; Past Students</p>
+    <h2 class="font-display" style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:300;letter-spacing:-0.018em;color:#4B4B30;margin-bottom:0.5rem;line-height:1.1;">
+      Students I've <em style="font-style:italic;color:#6F4128;">worked with</em>
+    </h2>
+    <p style="font-size:1rem;font-weight:300;line-height:1.78;color:#5a5a38;margin-bottom:2.5rem;max-width:50ch;">I have been fortunate to mentor and work alongside a number of talented undergraduate researchers in the Social Identity Lab at UW.</p>
+
+    <!-- Student cards grid -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.1rem;margin-bottom:3rem;">
+
+      <div class="student-card">
+        <p class="label label-glacier" style="margin-bottom:0.4rem;font-size:0.96rem;">Current · Honors Student</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;color:#4B4B30;margin-bottom:0.3rem;">Sarrah Khan</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.65;color:#5a5a38;margin-bottom:0.75rem;">Interested in adolescent well-being and the experiences of Muslim Americans.</p>
+        <a href="https://www.linkedin.com/in/sarrahkhan/" target="_blank" rel="noopener"
+          style="display:inline-flex;align-items:center;gap:0.4rem;font-family:'Jost',sans-serif;font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:#AEC7E0;text-decoration:none;border-bottom:1px solid rgba(174,199,224,0.4);transition:color 0.18s,border-color 0.18s;"
+          onmouseover="this.style.color='#6F4128';this.style.borderColor='rgba(111,65,40,0.4)';"
+          onmouseout="this.style.color='#AEC7E0';this.style.borderColor='rgba(174,199,224,0.4)';">
+          <svg width="11" height="11" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.1"/><path d="M4 5.5v4M4 3.5v.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><path d="M6.5 9.5V7a1.5 1.5 0 013 0v2.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><line x1="6.5" y1="5.5" x2="6.5" y2="9.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="student-card">
+        <p class="label label-glacier" style="margin-bottom:0.4rem;font-size:0.96rem;">Current · Undergraduate RA</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;color:#4B4B30;margin-bottom:0.3rem;">Polina Dorogova</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.65;color:#5a5a38;margin-bottom:0.75rem;">Interested in health, addiction, law, and clinical psychology.</p>
+        <a href="https://www.linkedin.com/in/polina-dorogova" target="_blank" rel="noopener"
+          style="display:inline-flex;align-items:center;gap:0.4rem;font-family:'Jost',sans-serif;font-size:0.82rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;color:#AEC7E0;text-decoration:none;border-bottom:1px solid rgba(174,199,224,0.4);transition:color 0.18s,border-color 0.18s;"
+          onmouseover="this.style.color='#6F4128';this.style.borderColor='rgba(111,65,40,0.4)';"
+          onmouseout="this.style.color='#AEC7E0';this.style.borderColor='rgba(174,199,224,0.4)';">
+          <svg width="11" height="11" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.1"/><path d="M4 5.5v4M4 3.5v.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><path d="M6.5 9.5V7a1.5 1.5 0 013 0v2.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/><line x1="6.5" y1="5.5" x2="6.5" y2="9.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="student-card">
+        <p class="label label-glacier" style="margin-bottom:0.4rem;font-size:0.96rem;">Current · Undergraduate RA</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;color:#4B4B30;margin-bottom:0.3rem;">Student Name</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.65;color:#5a5a38;">Project focus / interests. [Add details about this student's work and goals here.]</p>
+      </div>
+
+      <div class="student-card" style="border-left-color:#D2BF81;">
+        <p class="label" style="margin-bottom:0.4rem;font-size:0.96rem;color:#D2BF81;">Past · Undergraduate RA</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;color:#4B4B30;margin-bottom:0.3rem;">Student Name</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.65;color:#5a5a38;">What they went on to do. [Add outcome / next steps here.]</p>
+      </div>
+
+      <div class="student-card" style="border-left-color:#D2BF81;">
+        <p class="label" style="margin-bottom:0.4rem;font-size:0.96rem;color:#D2BF81;">Past · Undergraduate RA</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;color:#4B4B30;margin-bottom:0.3rem;">Student Name</p>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.65;color:#5a5a38;">What they went on to do. [Add outcome / next steps here.]</p>
+      </div>
+
+    </div>
+
+    <p style="font-size:1.02rem;font-weight:300;line-height:1.7;color:#99ABA6;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1rem;">
+      I currently mentor eight undergraduate research assistants in the Social Identity Lab. Names and details will be updated with student permission.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section style="padding:4rem 0;border-top:1px solid rgba(75,75,48,0.1);position:relative;overflow:hidden;">
+  <div class="decor" style="right:-50px;top:-40px;width:297px;opacity:0.31;">
+    <svg viewBox="0 0 220 220" fill="none"><circle cx="110" cy="110" r="92" stroke="#AEC7E0" stroke-width="1.4"/><circle cx="110" cy="110" r="66" stroke="#AEC7E0" stroke-width="0.9" stroke-dasharray="3 6"/></svg>
+  </div>
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <p class="label" style="margin-bottom:0.75rem;"><span class="rule"></span>Service</p>
+    <h2 class="font-display" style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:300;letter-spacing:-0.018em;color:#4B4B30;margin-bottom:2.5rem;line-height:1.1;">
+      Community &amp; <em style="font-style:italic;color:#6F4128;">Professional Development</em>
+    </h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;">
+      <div style="background:#F0EAD8;border-top:3px solid #AEC7E0;padding:1.6rem;border-radius:2px;box-shadow:0 1px 4px rgba(75,75,48,0.06);">
+        <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">2023–Present</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;color:#4B4B30;margin-bottom:0.4rem;">Diversity Steering Committee</p>
+        <p style="font-size:1.05rem;font-weight:300;color:#6F6C43;font-style:italic;margin-bottom:0.6rem;">UW Psychology Department</p>
+        <p style="font-size:1.08rem;font-weight:300;line-height:1.7;color:#3d3d22;">Working with the inclusive pedagogy team to design and implement a syllabus review process across the psychology department.</p>
+      </div>
+      <div style="background:#F0EAD8;border-top:3px solid #AFA857;padding:1.6rem;border-radius:2px;box-shadow:0 1px 4px rgba(75,75,48,0.06);">
+        <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">2026–Present</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;color:#4B4B30;margin-bottom:0.4rem;">SPSP Convention Committee</p>
+        <p style="font-size:1.05rem;font-weight:300;color:#6F6C43;font-style:italic;margin-bottom:0.6rem;">Society for Personality and Social Psychology</p>
+        <p style="font-size:1.08rem;font-weight:300;line-height:1.7;color:#3d3d22;">Serving as student liaison, coordinating the annual SPSP meeting and facilitating communication between student and faculty members.</p>
+      </div>
+      <div style="background:#F0EAD8;border-top:3px solid #D2BF81;padding:1.6rem;border-radius:2px;box-shadow:0 1px 4px rgba(75,75,48,0.06);">
+        <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">2021–2026</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;color:#4B4B30;margin-bottom:0.4rem;">HQ at SPSP</p>
+        <p style="font-size:1.05rem;font-weight:300;color:#6F6C43;font-style:italic;margin-bottom:0.6rem;">Here and Queer</p>
+        <p style="font-size:1.08rem;font-weight:300;line-height:1.7;color:#3d3d22;">Spearheaded outreach and coordination of networking events for LGBTQ+ social psychologists at the annual SPSP conference.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKING WITH ME -->
+<section style="padding:4rem 0 5rem;background:rgba(240,234,216,0.5);border-top:1px solid rgba(75,75,48,0.1);">
+  <!-- Starburst top right -->
+  <div class="decor" style="right:40px;top:-10px;width:189px;opacity:0.33;">
+    <svg viewBox="0 0 140 140" fill="none">
+      <circle cx="70" cy="70" r="5" stroke="#AFA857" stroke-width="1.2"/>
+      <line x1="70" y1="8" x2="70" y2="24" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="70" y1="116" x2="70" y2="132" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="8" y1="70" x2="24" y2="70" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="116" y1="70" x2="132" y2="70" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="24" y1="24" x2="35" y2="35" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="105" y1="105" x2="116" y2="116" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="116" y1="24" x2="105" y2="35" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="24" y1="116" x2="35" y2="105" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="70" cy="70" r="35" stroke="#AFA857" stroke-width="0.8" stroke-dasharray="3 5" opacity="0.4"/>
+    </svg>
+  </div>
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <div style="display:grid;grid-template-columns:2fr 1fr;gap:3rem;align-items:start;flex-wrap:wrap;">
+      <div>
+        <p class="label" style="margin-bottom:0.75rem;"><span class="rule"></span>Working With Me</p>
+        <h2 class="font-display" style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:300;letter-spacing:-0.018em;color:#4B4B30;margin-bottom:1.5rem;line-height:1.1;">
+          Interested in <em style="font-style:italic;color:#6F4128;">joining the lab?</em>
+        </h2>
+        <p style="font-size:1.02rem;font-weight:300;line-height:1.82;color:#3d3d22;margin-bottom:1.2rem;">
+          I welcome inquiries from undergraduate students who are curious about social psychology and interested in developing research skills. You don't need prior experience — enthusiasm, reliability, and a genuine interest in the questions we study are what matter most.
+        </p>
+        <p style="font-size:1.02rem;font-weight:300;line-height:1.82;color:#3d3d22;margin-bottom:2rem;">
+          As a research assistant in the Social Identity Lab, you'll have the opportunity to contribute to real studies, learn statistical methods, attend lab meetings, and receive mentorship tailored to your goals. If you're interested, please reach out via email with a brief note about yourself and what draws you to this work.
+        </p>
+        <a href="https://uwsilab.wixsite.com/home/join-the-lab" target="_blank" rel="noopener" class="btn-primary">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.1"/><path d="M4 6.5h5.5M7.5 4.5l2 2-2 2" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Join the Lab
+        </a>
+      </div>
+      <div style="background:#F0EAD8;border-top:3px solid #AEC7E0;border-radius:2px;padding:1.6rem 1.4rem;box-shadow:0 1px 4px rgba(75,75,48,0.06);">
+        <p class="label label-glacier" style="margin-bottom:1rem;font-size:0.96rem;">What we look for</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.65rem;">
+          <li style="display:flex;align-items:flex-start;gap:0.6rem;font-size:1.08rem;font-weight:300;line-height:1.6;color:#3d3d22;">
+            <span style="color:#AEC7E0;font-size:1rem;margin-top:0.05rem;flex-shrink:0;">—</span>
+            Genuine curiosity about human psychology
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:0.6rem;font-size:1.08rem;font-weight:300;line-height:1.6;color:#3d3d22;">
+            <span style="color:#AEC7E0;font-size:1rem;margin-top:0.05rem;flex-shrink:0;">—</span>
+            Reliability and follow-through
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:0.6rem;font-size:1.08rem;font-weight:300;line-height:1.6;color:#3d3d22;">
+            <span style="color:#AEC7E0;font-size:1rem;margin-top:0.05rem;flex-shrink:0;">—</span>
+            Openness to feedback and learning
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:0.6rem;font-size:1.08rem;font-weight:300;line-height:1.6;color:#3d3d22;">
+            <span style="color:#AEC7E0;font-size:1rem;margin-top:0.05rem;flex-shrink:0;">—</span>
+            Commitment to ethical, open science
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:0.6rem;font-size:1.08rem;font-weight:300;line-height:1.6;color:#3d3d22;">
+            <span style="color:#AEC7E0;font-size:1rem;margin-top:0.05rem;flex-shrink:0;">—</span>
+            No prior experience required
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAB DOCUMENTS -->
+<section style="padding:4rem 0 5rem;background:rgba(240,234,216,0.5);border-top:1px solid rgba(75,75,48,0.1);position:relative;overflow:hidden;">
+
+  <div class="decor" style="left:-40px;bottom:-40px;width:216px;opacity:0.18;">
+    <svg viewBox="0 0 220 220" fill="none"><circle cx="110" cy="110" r="92" stroke="#D2BF81" stroke-width="1.4"/><circle cx="110" cy="110" r="65" stroke="#D2BF81" stroke-width="0.9" stroke-dasharray="3 6"/></svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <p class="label" style="margin-bottom:0.75rem;"><span class="rule"></span>Getting Started</p>
+    <h2 class="font-display" style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:300;letter-spacing:-0.018em;color:#4B4B30;margin-bottom:0.75rem;line-height:1.1;">
+      Lab <em style="font-style:italic;color:#6F4128;">Documents</em>
+    </h2>
+    <p style="font-size:1rem;font-weight:300;line-height:1.78;color:#5a5a38;max-width:52ch;margin-bottom:2.5rem;">All new members of the Social Identity Lab complete these documents at the start of their time with us. They outline mutual expectations and help us build a mentorship relationship that works for you.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;">
+
+      <a href="brand_assets/Sample Mentoring Agreement.pdf" target="_blank" rel="noopener"
+        style="display:block;text-decoration:none;background:#F0EAD8;border-top:3px solid #AEC7E0;border-radius:2px;padding:1.6rem 1.5rem;box-shadow:0 1px 4px rgba(75,75,48,0.06);transition:transform 0.2s,box-shadow 0.2s;"
+        onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(75,75,48,0.1)';"
+        onmouseout="this.style.transform='';this.style.boxShadow='0 1px 4px rgba(75,75,48,0.06)';">
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
+          <div style="width:36px;height:36px;border:1.5px solid #AEC7E0;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="2" y="1" width="10" height="13" rx="1.5" stroke="#AEC7E0" stroke-width="1.2"/><path d="M5 5h5M5 7.5h5M5 10h3" stroke="#AEC7E0" stroke-width="1.1" stroke-linecap="round"/></svg>
+          </div>
+          <p class="label" style="color:#AEC7E0;margin:0;">PDF Document</p>
+        </div>
+        <p class="font-display" style="font-size:1.15rem;font-weight:400;color:#4B4B30;margin-bottom:0.4rem;line-height:1.3;">Social Identity Lab Mentoring Agreement</p>
+        <p style="font-size:1rem;font-weight:300;line-height:1.68;color:#5a5a38;margin-bottom:0.75rem;">Outlines mutual expectations — what I expect from you as a researcher, and what you can expect from me as a mentor.</p>
+        <p style="font-size:0.96rem;font-weight:400;color:#AEC7E0;letter-spacing:0.04em;">Download PDF →</p>
+      </a>
+
+      <a href="brand_assets/Undergraduate-Research-Individual-Development-Plan_29Oct2025.pdf" target="_blank" rel="noopener"
+        style="display:block;text-decoration:none;background:#F0EAD8;border-top:3px solid #AFA857;border-radius:2px;padding:1.6rem 1.5rem;box-shadow:0 1px 4px rgba(75,75,48,0.06);transition:transform 0.2s,box-shadow 0.2s;"
+        onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(75,75,48,0.1)';"
+        onmouseout="this.style.transform='';this.style.boxShadow='0 1px 4px rgba(75,75,48,0.06)';">
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
+          <div style="width:36px;height:36px;border:1.5px solid #AFA857;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="2" y="1" width="10" height="13" rx="1.5" stroke="#AFA857" stroke-width="1.2"/><path d="M5 5h5M5 7.5h5M5 10h3" stroke="#AFA857" stroke-width="1.1" stroke-linecap="round"/></svg>
+          </div>
+          <p class="label" style="color:#AFA857;margin:0;">PDF Document</p>
+        </div>
+        <p class="font-display" style="font-size:1.15rem;font-weight:400;color:#4B4B30;margin-bottom:0.4rem;line-height:1.3;">Individual Development Plan</p>
+        <p style="font-size:1rem;font-weight:300;line-height:1.68;color:#5a5a38;margin-bottom:0.75rem;">A living document to help you set research goals, map milestones, and reflect on your growth as a researcher throughout your time in the lab.</p>
+        <p style="font-size:0.96rem;font-weight:400;color:#AEC7E0;letter-spacing:0.04em;">Download PDF →</p>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:#4B4B30;padding:1.5rem 0;border-top:1px solid rgba(240,234,216,0.1);">
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
+    <p style="font-size:1.02rem;font-weight:300;color:#6F6C43;letter-spacing:0.04em;">© 2025 MJ Schneider</p>
+    <p style="font-size:1.02rem;font-weight:300;color:#6F6C43;letter-spacing:0.04em;">Department of Psychology · University of Washington · Seattle, WA</p>
+  </div>
+</footer>
+
+</body>
+</html>

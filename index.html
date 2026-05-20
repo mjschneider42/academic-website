@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MJ Schneider · Social Psychology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mosswood: '#4B4B30',
+            olive: '#6F6C43',
+            sage: '#99ABA6',
+            chamomile: '#D2BF81',
+            cream: '#F0EAD8',
+            fennel: '#AFA857',
+            glacier: '#AEC7E0',
+            cedar: '#6F4128',
+            linen: '#f7f2e6',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+    html { scroll-behavior: smooth; }
+    body { background: #f7f2e6; color: #4B4B30; font-family: 'Jost', sans-serif; font-weight: 300; }
+
+    /* ── SHARED TYPOGRAPHY ── */
+    .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .label {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.13em; text-transform: uppercase;
+      color: #AFA857;
+    }
+    .label-glacier { color: #AEC7E0; }
+    .rule { display: inline-block; width: 2rem; height: 1px; background: #D2BF81; vertical-align: middle; margin-right: 0.65rem; }
+
+    /* ── NAV ── */
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 500; color: #4B4B30;
+      text-decoration: none; letter-spacing: 0.01em;
+    }
+    .nav-logo em { font-style: italic; color: #6F4128; }
+    .nav-link {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.11em; text-transform: uppercase;
+      color: #6F6C43; text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .nav-link:hover { color: #4B4B30; border-bottom-color: #AEC7E0; }
+    .nav-link:focus-visible { outline: 2px solid #AEC7E0; outline-offset: 3px; border-radius: 2px; }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      background: #4B4B30; color: #f7f2e6;
+      padding: 0.7rem 1.5rem; border-radius: 2px; text-decoration: none;
+      box-shadow: 0 2px 10px rgba(75,75,48,0.2), 0 1px 2px rgba(75,75,48,0.12);
+      transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    }
+    .btn-primary:hover { background: #6F4128; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(111,65,40,0.25); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible { outline: 2px solid #AEC7E0; outline-offset: 3px; }
+
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 0.45rem;
+      font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #4B4B30; border: 1.5px solid rgba(75,75,48,0.3);
+      padding: 0.7rem 1.5rem; border-radius: 2px; text-decoration: none;
+      transition: border-color 0.2s, color 0.2s, transform 0.15s;
+    }
+    .btn-ghost:hover { border-color: #AEC7E0; color: #4B4B30; transform: translateY(-1px); }
+    .btn-ghost:active { transform: translateY(0); }
+    .btn-ghost:focus-visible { outline: 2px solid #AEC7E0; outline-offset: 3px; }
+
+    /* ── HEADSHOT ── */
+    .headshot {
+      width: 320px; height: 320px;
+      overflow: hidden; border-radius: 3px; flex-shrink: 0;
+      box-shadow: 0 6px 32px rgba(75,75,48,0.16), 0 1px 4px rgba(75,75,48,0.1);
+      position: relative;
+    }
+    .headshot img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: 82% 8%;
+      display: block;
+    }
+    .headshot::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(155deg, rgba(174,199,224,0.06) 0%, rgba(111,65,40,0.08) 100%);
+      mix-blend-mode: multiply; pointer-events: none;
+    }
+
+    /* ── RESEARCH CARDS ── */
+    .research-card {
+      background: #F0EAD8;
+      border-top: 3px solid #AEC7E0;
+      border-radius: 2px; padding: 1.6rem 1.5rem 1.75rem;
+      box-shadow: 0 1px 4px rgba(75,75,48,0.06), 0 4px 20px rgba(75,75,48,0.05);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
+      text-decoration: none; display: block; color: inherit;
+    }
+    .research-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(75,75,48,0.1), 0 10px 28px rgba(75,75,48,0.08);
+    }
+    .research-card:focus-visible { outline: 2px solid #AEC7E0; outline-offset: 3px; }
+
+    /* ── PUBLICATION ENTRIES ── */
+    .pub-entry {
+      border-top: 1px solid rgba(75,75,48,0.14);
+      padding: 1.5rem 0;
+      transition: background 0.18s;
+      cursor: pointer;
+    }
+    .pub-entry:last-child { border-bottom: 1px solid rgba(75,75,48,0.14); }
+    .pub-entry:hover { background: rgba(174,199,224,0.1); }
+    a.pub-entry {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    a.pub-entry:hover .pub-title { color: #6F4128; }
+
+    /* ── SECTION BG VARIANTS ── */
+    .bg-glacier-tint { background: rgba(174,199,224,0.1); }
+    .bg-cream-tint   { background: rgba(240,234,216,0.55); }
+
+    /* ── DECORATIVE SVG WRAPPER ── */
+    .decor {
+      position: absolute; pointer-events: none; z-index: 0;
+    }
+    section, .section-wrap { position: relative; overflow: hidden; }
+
+    /* ── FOOTER ── */
+    footer { background: #4B4B30; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════ NAV ══════════════════ -->
+<header style="position:sticky;top:0;z-index:50;background:rgba(247,242,230,0.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(75,75,48,0.1);">
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:56px;">
+    <a href="index.html" class="nav-logo" style="display:flex;align-items:center;gap:0.55rem;">
+      <!-- leaf icon -->
+      <svg width="14" height="18" viewBox="0 0 14 18" fill="none" style="color:#4B4B30;flex-shrink:0;">
+        <path d="M7 17 C7 17 7 9 7 5 C7 2.5 9.2 1 11.8 1.4 C11.8 1.4 12.2 5.5 9.5 8.2 C8.2 9.5 7 11 7 17Z" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 17 C7 17 7 9 7 5 C7 2.5 4.8 1 2.2 1.4 C2.2 1.4 1.8 5.5 4.5 8.2 C5.8 9.5 7 11 7 17Z" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      MJ <em>Schneider</em>
+    </a>
+    <nav style="display:flex;align-items:center;gap:2rem;">
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="publications.html" class="nav-link">Publications</a>
+      <a href="teaching.html" class="nav-link">Teaching</a>
+      <a href="mentorship.html" class="nav-link">Mentorship</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section style="background:linear-gradient(160deg, #f7f2e6 60%, rgba(174,199,224,0.18) 100%);padding:5rem 0 5rem;position:relative;overflow:hidden;">
+
+  <!-- Decorative botanical branch — top right -->
+  <div class="decor" style="right:-30px;top:-20px;width:297px;opacity:0.34;">
+    <svg viewBox="0 0 120 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M60 430 C59 340 61 240 60 20" stroke="#AEC7E0" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M60 380 C76 364 104 370 99 392 C94 410 60 402 60 380Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 355 C44 339 16 347 21 369 C26 387 60 379 60 355Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 296 C80 276 112 284 106 310 C100 332 60 320 60 296Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 270 C40 250 8 260 14 286 C20 308 60 296 60 270Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 208 C84 184 120 194 112 224 C104 250 60 236 60 208Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 180 C36 156 0 168 8 198 C16 224 60 210 60 180Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 120 C80 98 108 108 102 134 C96 156 60 144 60 120Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 95 C40 73 12 85 18 111 C24 133 60 121 60 95Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- small bud -->
+      <path d="M60 40 C66 28 76 26 74 36 C72 44 60 44 60 40Z" stroke="#AEC7E0" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+      <path d="M60 40 C54 28 44 26 46 36 C48 44 60 44 60 40Z" stroke="#AEC7E0" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- Decorative scattered dots — left -->
+  <div class="decor" style="left:20px;bottom:40px;width:135px;opacity:0.34;">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="18" cy="22" r="4" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="52" cy="12" r="2.5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="80" cy="30" r="5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="35" cy="58" r="3" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="70" cy="65" r="2" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="10" cy="80" r="6" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="55" cy="85" r="3.5" stroke="#AFA857" stroke-width="1.2"/>
+      <circle cx="90" cy="88" r="2.5" stroke="#AFA857" stroke-width="1.2"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <div style="display:flex;flex-direction:row;align-items:flex-start;gap:3.5rem;flex-wrap:wrap;">
+
+      <!-- Headshot -->
+      <div class="headshot">
+        <img src="brand_assets/2021_headshot.JPEG" alt="MJ Schneider" />
+      </div>
+
+      <!-- Bio text -->
+      <div style="flex:1;min-width:280px;padding-top:0.5rem;">
+        <p class="label" style="margin-bottom:1rem;"><span class="rule"></span>Social Scientist</p>
+        <h1 class="font-display" style="font-size:clamp(3rem,5.5vw,4.2rem);font-weight:300;line-height:1.0;letter-spacing:-0.025em;color:#4B4B30;margin-bottom:0.6rem;">
+          MJ <em style="font-style:italic;color:#6F4128;">Schneider</em>
+        </h1>
+        <p style="font-family:'Jost',sans-serif;font-size:0.96rem;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:#99ABA6;margin-bottom:1.4rem;">Ph.D. Student · University of Washington</p>
+        <div style="width:2.5rem;height:1px;background:#D2BF81;margin-bottom:1.5rem;"></div>
+        <p style="font-size:1.05rem;font-weight:300;line-height:1.82;color:#3d3d22;max-width:42ch;margin-bottom:2rem;">
+          I study how people understand and change themselves — how identity is built, bent, and rebuilt through social experience. My work sits at the intersection of self-concept, social identity, and prejudice, with a particular interest in how simulation and social context shape the way we know who we are.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
+          <a href="publications.html" class="btn-primary">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="1" stroke="currentColor" stroke-width="1.1"/><path d="M4 4.5h5M4 6.5h5M4 8.5h3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+            View Publications
+          </a>
+          <a href="brand_assets/CV_publiccopy.pdf" target="_blank" rel="noopener" class="btn-ghost">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 1v7.5M4 6.5l2.5 2.5 2.5-2.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 10.5v.5a1 1 0 001 1h9a1 1 0 001-1v-.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ RESEARCH ══════════════════ -->
+<section style="padding:5rem 0;background:rgba(174,199,224,0.08);position:relative;overflow:hidden;">
+
+  <!-- Decorative arc — bottom left -->
+  <div class="decor" style="left:-60px;bottom:-60px;width:351px;opacity:0.32;">
+    <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="130" cy="130" r="110" stroke="#AEC7E0" stroke-width="1.4"/>
+      <circle cx="130" cy="130" r="85" stroke="#AEC7E0" stroke-width="1.0"/>
+    </svg>
+  </div>
+
+  <!-- Small sprig — top right -->
+  <div class="decor" style="right:40px;top:30px;width:108px;opacity:0.32;">
+    <svg viewBox="0 0 80 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40 155 C40 110 40 60 40 10" stroke="#AFA857" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M40 120 C52 108 68 114 65 130 C62 143 40 136 40 120Z" stroke="#AFA857" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 100 C28 88 12 96 15 112 C18 125 40 118 40 100Z" stroke="#AFA857" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 72 C54 58 72 66 68 84 C64 99 40 92 40 72Z" stroke="#AFA857" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 52 C26 38 8 48 12 66 C16 81 40 74 40 52Z" stroke="#AFA857" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;">
+      <div>
+        <p class="label" style="margin-bottom:0.75rem;"><span class="rule"></span>Research Interests</p>
+        <h2 class="font-display" style="font-size:clamp(2rem,3.8vw,2.75rem);font-weight:300;letter-spacing:-0.018em;color:#4B4B30;line-height:1.1;">
+          Questions I <em style="font-style:italic;color:#6F4128;">study</em>
+        </h2>
+      </div>
+      <a href="research.html" class="nav-link" style="white-space:nowrap;">Full research page →</a>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;">
+      <a href="research.html#self" class="research-card">
+        <p class="label" style="margin-bottom:0.8rem;">Self &amp; Identity</p>
+        <p style="font-size:1rem;font-weight:300;line-height:1.78;color:#3d3d22;">How do people revise their self-concepts? I examine how mental simulation, social feedback, and context reshape who we understand ourselves to be — including how identity shifts across major life transitions.</p>
+      </a>
+      <a href="research.html#prejudice" class="research-card">
+        <p class="label" style="margin-bottom:0.8rem;">Prejudice &amp; Social Context</p>
+        <p style="font-size:1rem;font-weight:300;line-height:1.78;color:#3d3d22;">How do social identities — gender, sexuality, generational status — interact with systems of bias? I study prejudice as it operates in everyday settings, institutions, and political contexts.</p>
+      </a>
+      <a href="research.html#polarization" class="research-card">
+        <p class="label" style="margin-bottom:0.8rem;">Political Polarization</p>
+        <p style="font-size:1rem;font-weight:300;line-height:1.78;color:#3d3d22;">Can religious community reduce political animosity? As part of the Templeton-funded project on religion and political polarization, I examine how religious behavior shapes affective polarization across the ideological spectrum.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PUBLICATIONS ══════════════════ -->
+<section style="padding:5rem 0;position:relative;overflow:hidden;">
+
+  <!-- Decorative wave lines — bottom right -->
+  <div class="decor" style="right:-20px;bottom:20px;width:378px;opacity:0.31;">
+    <svg viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 16 C35 6 70 26 105 16 C140 6 175 26 210 16 C245 6 265 14 280 12" stroke="#AEC7E0" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+      <path d="M0 38 C35 28 70 48 105 38 C140 28 175 48 210 38 C245 28 265 36 280 34" stroke="#AEC7E0" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+      <path d="M0 60 C35 50 70 70 105 60 C140 50 175 70 210 60 C245 50 265 58 280 56" stroke="#AEC7E0" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+    </svg>
+  </div>
+
+  <!-- Small botanical left -->
+  <div class="decor" style="left:-10px;top:50px;width:94px;opacity:0.33;">
+    <svg viewBox="0 0 70 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M35 195 C35 140 35 80 35 10" stroke="#D2BF81" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M35 160 C47 146 62 152 59 170 C56 184 35 177 35 160Z" stroke="#D2BF81" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M35 138 C23 124 8 132 11 150 C14 164 35 157 35 138Z" stroke="#D2BF81" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M35 108 C50 92 66 100 62 120 C58 136 35 128 35 108Z" stroke="#D2BF81" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M35 86 C20 70 4 80 8 100 C12 116 35 108 35 86Z" stroke="#D2BF81" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;">
+      <div>
+        <p class="label" style="margin-bottom:0.75rem;"><span class="rule"></span>Selected Publications</p>
+        <h2 class="font-display" style="font-size:clamp(2rem,3.8vw,2.75rem);font-weight:300;letter-spacing:-0.018em;color:#4B4B30;line-height:1.1;">
+          Published <em style="font-style:italic;color:#6F4128;">Work</em>
+        </h2>
+      </div>
+      <a href="publications.html" class="nav-link" style="white-space:nowrap;">All publications →</a>
+    </div>
+
+    <div>
+      <a href="https://osf.io/4k5dc/overview?view_only=6cb4698ea1ca4ed8b7f72964fa44e9ea" target="_blank" rel="noopener" class="pub-entry">
+        <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">Accepted · Journal Article</p>
+        <p class="font-display pub-title" style="font-size:1.18rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.45rem;transition:color 0.18s;">Does religious behavior reduce affective polarization? Evidence from a daily diary study</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;line-height:1.6;">Smiley, A. H., <strong style="font-weight:500;">Schneider, M. J.</strong>, Kaiser, C. &nbsp;·&nbsp; <em>Psychology of Religion and Spirituality</em></p>
+      </a>
+
+      <a href="https://doi.org/10.1037/xge0001663" target="_blank" rel="noopener" class="pub-entry">
+        <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">2024 · Journal Article</p>
+        <p class="font-display pub-title" style="font-size:1.18rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.45rem;transition:color 0.18s;">Simulation requires activation of self-knowledge to change self-concept</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;line-height:1.6;"><strong style="font-weight:500;">Schneider, M. J.</strong>, Rubin-McGregor, J. M., Elder, J., Hughes, B., &amp; Tamir, D. &nbsp;·&nbsp; <em>Journal of Experimental Psychology: General</em></p>
+      </a>
+
+      <a href="https://www.routledge.com/Handbook-of-Prejudice-Stereotyping-and-Discrimination/Nelson/p/book/9781032500577" target="_blank" rel="noopener" class="pub-entry">
+        <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">2024 · Book Chapter</p>
+        <p class="font-display pub-title" style="font-size:1.18rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.45rem;transition:color 0.18s;">Sexual and gender identity prejudice</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;line-height:1.6;">Kite, M., Wagner, L., &amp; <strong style="font-weight:500;">Schneider, M. J.</strong> &nbsp;·&nbsp; <em>Handbook of Prejudice, Stereotyping, and Discrimination, 3rd Ed.</em> Routledge &amp; CRC Press</p>
+      </a>
+
+      <a href="https://www.routledge.com/Investigating-Pop-Psychology-Pseudoscience-Fringe-Science-and-Controversies/Hupp-Wiseman/p/book/9780367609948" target="_blank" rel="noopener" class="pub-entry">
+        <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">2022 · Book Chapter</p>
+        <p class="font-display pub-title" style="font-size:1.18rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.45rem;transition:color 0.18s;">Brain training and intelligence</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;line-height:1.6;"><strong style="font-weight:500;">Schneider, M. J.</strong>, &amp; Viskontas, I.V. &nbsp;·&nbsp; <em>Investigating Pop Psychology: Pseudoscience, Fringe Science and Controversies.</em> Taylor and Francis</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ TEACHING ══════════════════ -->
+<section style="padding:5rem 0;background:rgba(240,234,216,0.5);position:relative;overflow:hidden;">
+
+  <!-- Starburst — top right -->
+  <div class="decor" style="right:30px;top:-20px;width:216px;opacity:0.34;">
+    <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="80" cy="80" r="6" stroke="#AFA857" stroke-width="1.2"/>
+      <line x1="80" y1="10" x2="80" y2="30" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="80" y1="130" x2="80" y2="150" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="10" y1="80" x2="30" y2="80" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="130" y1="80" x2="150" y2="80" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="27" y1="27" x2="41" y2="41" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="119" y1="119" x2="133" y2="133" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="133" y1="27" x2="119" y2="41" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="27" y1="133" x2="41" y2="119" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="80" cy="80" r="40" stroke="#AFA857" stroke-width="0.8" stroke-dasharray="3 5" opacity="0.4"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2.5rem;">
+      <div>
+        <p class="label" style="margin-bottom:0.75rem;"><span class="rule"></span>Teaching</p>
+        <h2 class="font-display" style="font-size:clamp(2rem,3.8vw,2.75rem);font-weight:300;letter-spacing:-0.018em;color:#4B4B30;line-height:1.1;">
+          In the <em style="font-style:italic;color:#6F4128;">Classroom</em>
+        </h2>
+      </div>
+      <a href="teaching.html" class="nav-link" style="white-space:nowrap;">Full teaching page →</a>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem 3.5rem;">
+      <div>
+        <p class="label" style="margin-bottom:0.55rem;color:#AEC7E0;">Teaching Assistant · University of Washington</p>
+        <p class="font-display" style="font-size:1.15rem;font-weight:400;color:#4B4B30;margin-bottom:0.75rem;">Graduate TA · 2023–Present</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.3rem;">
+          <li style="font-size:1.1rem;font-weight:300;color:#5a5a38;display:flex;align-items:baseline;gap:0.5rem;"><span style="color:#AEC7E0;flex-shrink:0;">—</span>Fundamentals of Research Design</li>
+          <li style="font-size:1.1rem;font-weight:300;color:#5a5a38;display:flex;align-items:baseline;gap:0.5rem;"><span style="color:#AEC7E0;flex-shrink:0;">—</span>Abnormal Psychology</li>
+          <li style="font-size:1.1rem;font-weight:300;color:#5a5a38;display:flex;align-items:baseline;gap:0.5rem;"><span style="color:#AEC7E0;flex-shrink:0;">—</span>Advanced Human Sexuality</li>
+          <li style="font-size:1.1rem;font-weight:300;color:#5a5a38;display:flex;align-items:baseline;gap:0.5rem;"><span style="color:#AEC7E0;flex-shrink:0;">—</span>Psychology of Gender</li>
+        </ul>
+      </div>
+      <div>
+        <p class="label" style="margin-bottom:0.55rem;color:#AEC7E0;">Reader / Grader · University of Washington</p>
+        <p class="font-display" style="font-size:1.15rem;font-weight:400;color:#4B4B30;margin-bottom:0.75rem;">Course Support · 2023–Present</p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.3rem;">
+          <li style="font-size:1.1rem;font-weight:300;color:#5a5a38;display:flex;align-items:baseline;gap:0.5rem;"><span style="color:#D2BF81;flex-shrink:0;">—</span>Psychology of Health Disparities</li>
+          <li style="font-size:1.1rem;font-weight:300;color:#5a5a38;display:flex;align-items:baseline;gap:0.5rem;"><span style="color:#D2BF81;flex-shrink:0;">—</span>Biopsychology</li>
+          <li style="font-size:1.1rem;font-weight:300;color:#5a5a38;display:flex;align-items:baseline;gap:0.5rem;"><span style="color:#D2BF81;flex-shrink:0;">—</span>Social Psychology Lab</li>
+          <li style="font-size:1.1rem;font-weight:300;color:#5a5a38;display:flex;align-items:baseline;gap:0.5rem;"><span style="color:#D2BF81;flex-shrink:0;">—</span>Learning</li>
+          <li style="font-size:1.1rem;font-weight:300;color:#5a5a38;display:flex;align-items:baseline;gap:0.5rem;"><span style="color:#D2BF81;flex-shrink:0;">—</span>Motivation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ MENTORSHIP TEASER ══════════════════ -->
+<section style="padding:5rem 0;background:rgba(174,199,224,0.07);position:relative;overflow:hidden;">
+
+  <!-- Small sprig left -->
+  <div class="decor" style="left:-10px;top:40px;width:94px;opacity:0.34;">
+    <svg viewBox="0 0 70 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M35 195 C35 140 35 80 35 10" stroke="#D2BF81" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M35 160 C47 146 62 152 59 170 C56 184 35 177 35 160Z" stroke="#D2BF81" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M35 138 C23 124 8 132 11 150 C14 164 35 157 35 138Z" stroke="#D2BF81" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M35 108 C50 92 66 100 62 120 C58 136 35 128 35 108Z" stroke="#D2BF81" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M35 86 C20 70 4 80 8 100 C12 116 35 108 35 86Z" stroke="#D2BF81" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;">
+      <div>
+        <p class="label" style="margin-bottom:0.75rem;"><span class="rule"></span>Mentorship</p>
+        <h2 class="font-display" style="font-size:clamp(2rem,3.8vw,2.75rem);font-weight:300;letter-spacing:-0.018em;color:#4B4B30;line-height:1.1;">
+          Growing <em style="font-style:italic;color:#6F4128;">together</em>
+        </h2>
+      </div>
+      <a href="mentorship.html" class="nav-link" style="white-space:nowrap;">Mentorship page →</a>
+    </div>
+    <p style="font-size:1.05rem;font-weight:300;line-height:1.8;color:#3d3d22;max-width:58ch;margin-bottom:0;">
+      I mentor multiple undergraduate research assistants and honors students in the Social Identity Lab each year, supporting them through empirical research, professional development, and whatever path comes next — inside or outside academia.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════ CONTACT CTA ══════════════════ -->
+<section style="padding:5rem 0;background:#4B4B30;position:relative;overflow:hidden;">
+
+  <!-- Botanical branch on right — inverted palette -->
+  <div class="decor" style="right:-20px;top:0;width:216px;opacity:0.31;">
+    <svg viewBox="0 0 120 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M60 355 C59 280 61 180 60 20" stroke="#AEC7E0" stroke-width="1.4" stroke-linecap="round"/>
+      <path d="M60 310 C76 294 100 300 95 320 C90 336 60 328 60 310Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 285 C44 269 20 277 25 297 C30 313 60 305 60 285Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 232 C80 212 108 220 102 244 C96 264 60 252 60 232Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 206 C40 186 12 196 18 220 C24 240 60 228 60 206Z" stroke="#AEC7E0" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 150 C82 128 112 138 104 164 C96 186 60 172 60 150Z" stroke="#D2BF81" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M60 123 C38 101 8 113 16 139 C24 161 60 147 60 123Z" stroke="#D2BF81" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <!-- Arc left -->
+  <div class="decor" style="left:-80px;bottom:-80px;width:324px;opacity:0.22;">
+    <svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="120" cy="120" r="100" stroke="#D2BF81" stroke-width="1.4"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;text-align:center;position:relative;z-index:1;">
+    <p class="label" style="color:#AFA857;margin-bottom:1rem;"><span style="display:inline-block;width:2rem;height:1px;background:#AFA857;vertical-align:middle;margin-right:0.65rem;"></span>Get in Touch</p>
+    <h2 class="font-display" style="font-size:clamp(2rem,4vw,3rem);font-weight:300;letter-spacing:-0.018em;color:#F0EAD8;margin-bottom:1rem;line-height:1.1;">
+      Let's <em style="font-style:italic;color:#D2BF81;">connect</em>
+    </h2>
+    <p style="font-size:1.05rem;font-weight:300;line-height:1.8;color:#99ABA6;max-width:36ch;margin:0 auto 2.5rem;">I'm always glad to hear from collaborators, students, and anyone curious about the work.</p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.75rem;">
+      <a href="mailto:megans38@uw.edu" class="btn-primary" style="background:#F0EAD8;color:#4B4B30;box-shadow:0 2px 12px rgba(0,0,0,0.25);"
+        onmouseover="this.style.background='#AEC7E0';this.style.color='#4B4B30';"
+        onmouseout="this.style.background='#F0EAD8';this.style.color='#4B4B30';">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="3" width="11" height="8" rx="1" stroke="currentColor" stroke-width="1.1"/><path d="M1 3.5l5.5 4 5.5-4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+        Email
+      </a>
+      <a href="https://www.linkedin.com/in/mjschneider3" target="_blank" rel="noopener" class="btn-ghost" style="border-color:rgba(240,234,216,0.28);color:#F0EAD8;"
+        onmouseover="this.style.borderColor='#AEC7E0';this.style.color='#AEC7E0';"
+        onmouseout="this.style.borderColor='rgba(240,234,216,0.28)';this.style.color='#F0EAD8';">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="1" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.1"/><path d="M4 5.5v4M4 3.5v.5M6.5 9.5V7a1.5 1.5 0 013 0v2.5M6.5 5.5v4" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+        LinkedIn
+      </a>
+      <a href="https://psych.uw.edu/people/10590" target="_blank" rel="noopener" class="btn-ghost" style="border-color:rgba(240,234,216,0.28);color:#F0EAD8;"
+        onmouseover="this.style.borderColor='#AEC7E0';this.style.color='#AEC7E0';"
+        onmouseout="this.style.borderColor='rgba(240,234,216,0.28)';this.style.color='#F0EAD8';">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><circle cx="6.5" cy="6.5" r="5.5" stroke="currentColor" stroke-width="1.1"/><path d="M1 6.5h11M6.5 1c-1.5 2-2.5 3.5-2.5 5.5S5 11 6.5 12M6.5 1c1.5 2 2.5 3.5 2.5 5.5S8 11 6.5 12" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+        UW Profile
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer style="padding:1.5rem 0;border-top:1px solid rgba(240,234,216,0.1);">
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
+    <p style="font-size:1.02rem;font-weight:300;color:#6F6C43;letter-spacing:0.04em;">© 2025 MJ Schneider</p>
+    <p style="font-size:1.02rem;font-weight:300;color:#6F6C43;letter-spacing:0.04em;">Department of Psychology · University of Washington · Seattle, WA</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications · MJ Schneider</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+    html { scroll-behavior: smooth; }
+    body { background: #f7f2e6; color: #4B4B30; font-family: 'Jost', sans-serif; font-weight: 300; margin: 0; }
+    .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .label { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; color: #AFA857; }
+    .rule { display: inline-block; width: 2rem; height: 1px; background: #D2BF81; vertical-align: middle; margin-right: 0.65rem; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 500; color: #4B4B30; text-decoration: none; letter-spacing: 0.01em; display: flex; align-items: center; gap: 0.55rem; }
+    .nav-logo em { font-style: italic; color: #6F4128; }
+    .nav-link { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.11em; text-transform: uppercase; color: #6F6C43; text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s; }
+    .nav-link:hover { color: #4B4B30; border-bottom-color: #AEC7E0; }
+    .nav-link.active { color: #4B4B30; border-bottom-color: #AEC7E0; }
+    .nav-link:focus-visible { outline: 2px solid #AEC7E0; outline-offset: 3px; border-radius: 2px; }
+    .pub-entry { border-top: 1px solid rgba(75,75,48,0.13); padding: 1.5rem 0; transition: background 0.18s, padding-left 0.18s; cursor: default; }
+    .pub-entry:last-child { border-bottom: 1px solid rgba(75,75,48,0.13); }
+    .pub-entry:hover { background: rgba(174,199,224,0.1); }
+    a.pub-entry { display: block; text-decoration: none; color: inherit; cursor: pointer; }
+    a.pub-entry:hover { padding-left: 0.5rem; }
+    a.pub-entry:hover .pub-title { color: #6F4128; }
+    .pub-title { transition: color 0.18s; }
+    .decor { position: absolute; pointer-events: none; z-index: 0; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header style="position:sticky;top:0;z-index:50;background:rgba(247,242,230,0.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(75,75,48,0.1);">
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;height:56px;">
+    <a href="index.html" class="nav-logo">
+      <svg width="14" height="18" viewBox="0 0 14 18" fill="none" style="color:#4B4B30;flex-shrink:0;">
+        <path d="M7 17 C7 17 7 9 7 5 C7 2.5 9.2 1 11.8 1.4 C11.8 1.4 12.2 5.5 9.5 8.2 C8.2 9.5 7 11 7 17Z" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 17 C7 17 7 9 7 5 C7 2.5 4.8 1 2.2 1.4 C2.2 1.4 1.8 5.5 4.5 8.2 C5.8 9.5 7 11 7 17Z" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      MJ <em>Schneider</em>
+    </a>
+    <nav style="display:flex;align-items:center;gap:2rem;">
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="publications.html" class="nav-link active">Publications</a>
+      <a href="teaching.html" class="nav-link">Teaching</a>
+      <a href="mentorship.html" class="nav-link">Mentorship</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- PAGE HEADER -->
+<section style="padding:4.5rem 0 3.5rem;background:linear-gradient(160deg,#f7f2e6 55%,rgba(174,199,224,0.18) 100%);position:relative;overflow:hidden;">
+
+  <!-- Wave lines decoration -->
+  <div class="decor" style="right:-10px;top:0;width:432px;opacity:0.32;">
+    <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 30 C40 18 80 42 120 30 C160 18 200 42 240 30 C280 18 305 28 320 26" stroke="#AEC7E0" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+      <path d="M0 60 C40 48 80 72 120 60 C160 48 200 72 240 60 C280 48 305 58 320 56" stroke="#AEC7E0" stroke-width="1.3" stroke-linecap="round" fill="none"/>
+      <path d="M0 90 C40 78 80 102 120 90 C160 78 200 102 240 90 C280 78 305 88 320 86" stroke="#AEC7E0" stroke-width="1.1" stroke-linecap="round" fill="none"/>
+      <path d="M0 120 C40 108 80 132 120 120 C160 108 200 132 240 120 C280 108 305 118 320 116" stroke="#AEC7E0" stroke-width="0.9" stroke-linecap="round" fill="none" opacity="0.7"/>
+    </svg>
+  </div>
+
+  <!-- Starburst left -->
+  <div class="decor" style="left:20px;bottom:-10px;width:135px;opacity:0.32;">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="4" stroke="#AFA857" stroke-width="1.2"/>
+      <line x1="50" y1="8" x2="50" y2="22" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="50" y1="78" x2="50" y2="92" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="8" y1="50" x2="22" y2="50" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="78" y1="50" x2="92" y2="50" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="19" y1="19" x2="29" y2="29" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="71" y1="71" x2="81" y2="81" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="81" y1="19" x2="71" y2="29" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <line x1="19" y1="81" x2="29" y2="71" stroke="#AFA857" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="50" cy="50" r="28" stroke="#AFA857" stroke-width="0.8" stroke-dasharray="3 5" opacity="0.4"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <p class="label" style="margin-bottom:1rem;"><span class="rule"></span>Publications</p>
+    <h1 class="font-display" style="font-size:clamp(2.6rem,5vw,3.8rem);font-weight:300;line-height:1.06;letter-spacing:-0.022em;color:#4B4B30;">
+      Published <em style="font-style:italic;color:#6F4128;">Work</em>
+    </h1>
+    <p style="font-size:1.05rem;font-weight:300;line-height:1.82;color:#5a5a38;max-width:50ch;margin-top:1.5rem;">Journal articles, book chapters, and conference presentations. CV available for download below.</p>
+    <div style="margin-top:1.8rem;">
+      <a href="brand_assets/CV_publiccopy.pdf" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:0.45rem;font-family:'Jost',sans-serif;font-size:0.73rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;background:#4B4B30;color:#f7f2e6;padding:0.7rem 1.5rem;border-radius:2px;text-decoration:none;box-shadow:0 2px 10px rgba(75,75,48,0.2);transition:background 0.2s,transform 0.15s;"
+        onmouseover="this.style.background='#6F4128';this.style.transform='translateY(-1px)';"
+        onmouseout="this.style.background='#4B4B30';this.style.transform='translateY(0)';">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 1v7.5M4 6.5l2.5 2.5 2.5-2.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 10.5v.5a1 1 0 001 1h9a1 1 0 001-1v-.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+        Download Full CV
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNAL ARTICLES & BOOK CHAPTERS -->
+<section style="padding:4.5rem 0;position:relative;overflow:hidden;">
+
+  <!-- Small botanical right -->
+  <div class="decor" style="right:0;top:60px;width:121px;opacity:0.34;">
+    <svg viewBox="0 0 80 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M40 195 C40 140 40 80 40 10" stroke="#D2BF81" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M40 165 C54 150 70 157 67 175 C64 189 40 182 40 165Z" stroke="#D2BF81" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 142 C26 127 10 136 13 154 C16 168 40 161 40 142Z" stroke="#D2BF81" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 110 C56 94 74 102 70 122 C66 138 40 130 40 110Z" stroke="#D2BF81" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M40 86 C24 70 6 80 10 100 C14 116 40 108 40 86Z" stroke="#D2BF81" stroke-width="1.1" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <p class="label" style="margin-bottom:2rem;"><span class="rule"></span>Journal Articles &amp; Book Chapters</p>
+
+    <a href="https://osf.io/4k5dc/overview?view_only=6cb4698ea1ca4ed8b7f72964fa44e9ea" target="_blank" rel="noopener" class="pub-entry">
+      <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">Accepted · Registered Report · Journal Article</p>
+      <p class="font-display pub-title" style="font-size:1.2rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.5rem;">Does religious behavior reduce affective polarization? Evidence from a daily diary study</p>
+      <p style="font-size:1.05rem;font-weight:300;color:#5a5a38;line-height:1.65;margin-bottom:0.3rem;">Smiley, A. H., <strong style="font-weight:500;">Schneider, M. J.</strong>, Kaiser, C.</p>
+      <p style="font-size:1rem;font-weight:300;color:#6F6C43;font-style:italic;">Psychology of Religion and Spirituality</p>
+    </a>
+
+    <a href="https://doi.org/10.1037/xge0001663" target="_blank" rel="noopener" class="pub-entry">
+      <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">2024 · Journal Article</p>
+      <p class="font-display pub-title" style="font-size:1.2rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.5rem;">Simulation requires activation of self-knowledge to change self-concept</p>
+      <p style="font-size:1.05rem;font-weight:300;color:#5a5a38;line-height:1.65;margin-bottom:0.3rem;"><strong style="font-weight:500;">Schneider, M. J.</strong>, Rubin-McGregor, J. M., Elder, J., Hughes, B., &amp; Tamir, D.</p>
+      <p style="font-size:1rem;font-weight:300;color:#6F6C43;font-style:italic;">Journal of Experimental Psychology: General</p>
+    </a>
+
+    <a href="https://www.routledge.com/Handbook-of-Prejudice-Stereotyping-and-Discrimination/Nelson/p/book/9781032500577" target="_blank" rel="noopener" class="pub-entry">
+      <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">2024 · Book Chapter</p>
+      <p class="font-display pub-title" style="font-size:1.2rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.5rem;">Sexual and gender identity prejudice</p>
+      <p style="font-size:1.05rem;font-weight:300;color:#5a5a38;line-height:1.65;margin-bottom:0.3rem;">Kite, M., Wagner, L., &amp; <strong style="font-weight:500;">Schneider, M. J.</strong></p>
+      <p style="font-size:1rem;font-weight:300;color:#6F6C43;font-style:italic;">In T. Nelson (Ed.), <em>Handbook of Prejudice, Stereotyping, and Discrimination: 3rd Edition.</em> Routledge &amp; CRC Press</p>
+    </a>
+
+    <a href="https://www.routledge.com/Investigating-Pop-Psychology-Pseudoscience-Fringe-Science-and-Controversies/Hupp-Wiseman/p/book/9780367609948" target="_blank" rel="noopener" class="pub-entry">
+      <p class="label" style="margin-bottom:0.5rem;color:#AEC7E0;">2022 · Book Chapter</p>
+      <p class="font-display pub-title" style="font-size:1.2rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.5rem;">Brain training and intelligence</p>
+      <p style="font-size:1.05rem;font-weight:300;color:#5a5a38;line-height:1.65;margin-bottom:0.3rem;"><strong style="font-weight:500;">Schneider, M. J.</strong>, &amp; Viskontas, I.V.</p>
+      <p style="font-size:1rem;font-weight:300;color:#6F6C43;font-style:italic;">In S. Hupp &amp; R. Wiseman (Eds.), <em>Investigating Pop Psychology: Pseudoscience, Fringe Science and Controversies.</em> Taylor and Francis</p>
+    </a>
+  </div>
+</section>
+
+<!-- CONFERENCE PRESENTATIONS -->
+<section style="padding:4.5rem 0 5rem;background:rgba(174,199,224,0.1);position:relative;overflow:hidden;">
+
+  <div class="decor" style="left:-50px;bottom:-50px;width:270px;opacity:0.29;">
+    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="85" stroke="#AEC7E0" stroke-width="1.4"/>
+      <circle cx="100" cy="100" r="60" stroke="#AEC7E0" stroke-width="0.8" stroke-dasharray="3 5"/>
+    </svg>
+  </div>
+
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;position:relative;z-index:1;">
+    <p class="label" style="margin-bottom:2rem;"><span class="rule"></span>Conference Presentations</p>
+
+    <div style="display:flex;flex-direction:column;">
+
+      <div class="pub-entry">
+        <p class="label" style="margin-bottom:0.4rem;color:#AEC7E0;">2026 · Symposium Talk · SPSP, Chicago</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.35rem;">Tracing self-continuity across gender transitions</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;"><strong style="font-weight:500;">Schneider, M.J.</strong>, Tamir, D., Hershfield, H.</p>
+      </div>
+
+      <div class="pub-entry">
+        <p class="label" style="margin-bottom:0.4rem;color:#AEC7E0;">2025 · Poster · SPSP, Denver</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.35rem;">Self-concept and generational status in the transition to college</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;"><strong style="font-weight:500;">Schneider, M.J.</strong>, Kaiser, C.</p>
+      </div>
+
+      <div class="pub-entry">
+        <p class="label" style="margin-bottom:0.4rem;color:#AEC7E0;">2024 · Presentation · UW Teaching &amp; Learning Symposium</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.35rem;">Strengthening course inclusivity through syllabus review</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;">Song, R., Volpe, L., Gray, C., <strong style="font-weight:500;">Schneider, M.J.</strong></p>
+      </div>
+
+      <div class="pub-entry">
+        <p class="label" style="margin-bottom:0.4rem;color:#AEC7E0;">2024 · Poster · SPSP, San Diego</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.35rem;">Transformative experiences during COVID-19</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;"><strong style="font-weight:500;">Schneider, M. J.</strong>, Wilkins, L., Crockett., &amp; Tamir, D.</p>
+      </div>
+
+      <div class="pub-entry">
+        <p class="label" style="margin-bottom:0.4rem;color:#AEC7E0;">2023 · Poster · SPSP, Atlanta</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.35rem;">Simulation requires activation of self-knowledge to change self-knowledge</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;"><strong style="font-weight:500;">Schneider, M. J.</strong>, Rubin-McGregor, J. M., &amp; Tamir, D.</p>
+      </div>
+
+      <div class="pub-entry">
+        <p class="label" style="margin-bottom:0.4rem;color:#AEC7E0;">2022 · Virtual Poster · SPSP, San Francisco</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.35rem;">Activating self-knowledge to change self-knowledge: The role of implicit vs. explicit activation</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;"><strong style="font-weight:500;">Schneider, M. J.</strong>, Rubin-McGregor, J. M., &amp; Tamir, D.</p>
+      </div>
+
+      <div class="pub-entry">
+        <p class="label" style="margin-bottom:0.4rem;color:#AEC7E0;">2022 · Virtual Poster · SPSP, San Francisco</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.35rem;">Leveraging simulation to benefit women in STEM</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;">Rubin-McGregor, J. M., <strong style="font-weight:500;">Schneider, M. J.</strong>, &amp; Tamir, D.</p>
+      </div>
+
+      <div class="pub-entry">
+        <p class="label" style="margin-bottom:0.4rem;color:#AEC7E0;">2021 · Virtual Poster · Cognitive Science Society</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.35rem;">Does mental simulation of alternative research outcomes reduce bias in predicted results?</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;"><strong style="font-weight:500;">Schneider, M. J.</strong>, Merino, B., Adolfo, M., Martinez, M., Divinigracia, E., &amp; Munnich, E.</p>
+      </div>
+
+      <div class="pub-entry">
+        <p class="label" style="margin-bottom:0.4rem;color:#AEC7E0;">2021 · Virtual Poster · AP-LS Conference</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.35rem;">The impact of age and implicit theories of emotion on jury decision making</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;"><strong style="font-weight:500;">Schneider, M. J.</strong>, &amp; Knight, M. R.</p>
+      </div>
+
+      <div class="pub-entry">
+        <p class="label" style="margin-bottom:0.4rem;color:#AEC7E0;">2021 · Virtual Poster · Human Behavior Research Conference</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.35rem;">Is 'they' a truly gender neutral pronoun?</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;">Nassar, L., Ferko, S., <strong style="font-weight:500;">Schneider, M. J.</strong>, Mall, J., Dellar, A., &amp; Wagner, L.</p>
+      </div>
+
+      <div class="pub-entry">
+        <p class="label" style="margin-bottom:0.4rem;color:#AEC7E0;">2020 · Virtual Poster · Western Psychological Association</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.35rem;">The effects of misinformation and sleep-consolidation on memory accuracy</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;"><strong style="font-weight:500;">Schneider, M. J.</strong>, Bittner, D., &amp; Knight, M. R.</p>
+      </div>
+
+      <div class="pub-entry">
+        <p class="label" style="margin-bottom:0.4rem;color:#AEC7E0;">2020 · Virtual Poster · Cognitive Science Society</p>
+        <p class="font-display" style="font-size:1.1rem;font-weight:400;line-height:1.45;color:#4B4B30;margin-bottom:0.35rem;">Why not both: A qualitative analysis of alternative outcomes</p>
+        <p style="font-size:1.02rem;font-weight:300;color:#5a5a38;"><strong style="font-weight:500;">Schneider, M. J.</strong>, Bittner, D., Merino, B., Martinez, M., Cobb, W., &amp; Munnich, E.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#4B4B30;padding:1.5rem 0;border-top:1px solid rgba(240,234,216,0.1);">
+  <div style="max-width:1000px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
+    <p style="font-size:1.02rem;font-weight:300;color:#6F6C43;letter-spacing:0.04em;">© 2025 MJ Schneider</p>
+    <p style="font-size:1.02rem;font-weight:300;color:#6F6C43;letter-spacing:0.04em;">Department of Psychology · University of Washington · Seattle, WA</p>
+  </div>
+</footer>
+
+</body>
+</html>
